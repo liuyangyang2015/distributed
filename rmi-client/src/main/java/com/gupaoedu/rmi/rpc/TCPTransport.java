@@ -23,8 +23,8 @@ public class TCPTransport {
         System.out.println("创建一个新的连接");
         Socket socket;
         try{
-            String[] arrs=serviceAddress.split(":");
-            socket=new Socket(arrs[0],Integer.parseInt(arrs[1]));
+//            String[] arrs=serviceAddress.split(":");
+            socket=new Socket("127.0.0.1",8080);
             return socket;
         }catch (Exception e){
             throw new RuntimeException("连接建立失败");

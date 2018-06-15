@@ -16,9 +16,9 @@ import java.net.Socket;
  */
 public class User_Skeleton extends Thread{
 
-    private UserServer userServer;
+    private User userServer;
 
-    public User_Skeleton(UserServer userServer) {
+    public User_Skeleton(User userServer) {
         this.userServer = userServer;
     }
 

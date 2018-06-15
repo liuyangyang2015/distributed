@@ -5,12 +5,12 @@ package com.gupao.vip.michael.demo;
  * 加群获取视频：608583947
  * 风骚的Michael 老师
  */
-public class UserServer extends User
+public class UserServer
 {
 
     public static void main(String[] args) {
-        UserServer userServer=new UserServer();
-        userServer.setAge(18);
+        User userServer=new User();
+        userServer.setAge(188);
 
         User_Skeleton skel=new User_Skeleton(userServer);
 

@@ -12,14 +12,14 @@ import com.gupaoedu.rmi.rpc.zk.ZkConfig;
 public class ClientDemo {
 
     public static void main(String[] args) throws InterruptedException {
-        IServiceDiscovery serviceDiscovery=new
-                ServiceDiscoveryImpl(ZkConfig.CONNNECTION_STR);
+//        IServiceDiscovery serviceDiscovery=new
+//                ServiceDiscoveryImpl(ZkConfig.CONNNECTION_STR);
 
-        RpcClientProxy rpcClientProxy=new RpcClientProxy(serviceDiscovery);
+        RpcClientProxy rpcClientProxy=new RpcClientProxy(null);
 
         for(int i=0;i<10;i++) {
             IGpHello hello = rpcClientProxy.clientProxy(IGpHello.class, null);
-            System.out.println(hello.sayHello("mic"));
+            System.out.println(hello.sayHello("mic"+i));
             Thread.sleep(1000);
         }
     }
